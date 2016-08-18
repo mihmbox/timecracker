@@ -29,7 +29,7 @@ const config = {
     output: {
         path: outputPath, // Path of output file
         filename: '[name].js',
-        publicPath: '//' + HOST + ':' + PORT + '/Scripts/build'
+        publicPath: '//' + HOST + ':' + PORT + '/Content/build'
     },
 
     // Server Configuration options
