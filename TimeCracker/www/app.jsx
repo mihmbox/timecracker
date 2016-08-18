@@ -1,4 +1,18 @@
-﻿'use strict';
+import '../node_modules/materialize-css/dist/css/materialize.min.css';
+
+import React from 'react';
+import {render} from 'react-dom';
+
+import Materialize from './components/materialize.jsx';
+
+
+// materialize
+render(<Materialize />, document.getElementById('app'));
+
+
+///////////////////////////////////////
+///////////////////////////////////////
+///////////////////////////////////////
 
 ExecuteOrDelayUntilScriptLoaded(initializePage, "sp.js");
 

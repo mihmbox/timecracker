@@ -43,23 +43,67 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="Content\build\app.css" />
+    <Content Include="Content\build\app.js" />
+    <Content Include="Content\build\images\mik-ui-icons_444444_256x240.png" />
+    <Content Include="Content\build\images\mikkkkkkkkk.png" />
+    <Content Include="Content\build\images\subfolder\mikkkkkkkkk.png" />
+    <Content Include="Content\build\vendor.css" />
+    <Content Include="Content\build\vendor.js" />
+    <Content Include="Elements.xml" />
+    <Content Include="gulpfile.js" />
+    <Content Include="webpack-dev-server.config.js" />
+    <Content Include="webpack.config.js" />
+    <Content Include="www\components\images\mikkkkkkkkk.png" />
+    <Content Include="www\components\images\subfolder\mikkkkkkkkk.png" />
+    <Content Include="www\components\mik-ui-icons_444444_256x240.png" />
+    <Content Include="www\components\projects.css" />
+    <Content Include="www\components\topnav.css" />
+    <Content Include="www\images\mikkkkkkkkk.png" />
+    <Content Include="www\images\subfolder\mikkkkkkkkk.png" />
+    <Content Include="www\index.html" />
+    <Content Include="www\mikkkkkkkkk.png" />
+    <None Include="Content\build\fonts\Roboto-Bold.eot" />
+    <None Include="Content\build\fonts\Roboto-Bold.ttf" />
+    <None Include="Content\build\fonts\Roboto-Bold.woff" />
+    <None Include="Content\build\fonts\Roboto-Bold.woff2" />
+    <None Include="Content\build\fonts\Roboto-Light.eot" />
+    <None Include="Content\build\fonts\Roboto-Light.ttf" />
+    <None Include="Content\build\fonts\Roboto-Light.woff" />
+    <None Include="Content\build\fonts\Roboto-Light.woff2" />
+    <None Include="Content\build\fonts\Roboto-Medium.eot" />
+    <None Include="Content\build\fonts\Roboto-Medium.ttf" />
+    <None Include="Content\build\fonts\Roboto-Medium.woff" />
+    <None Include="Content\build\fonts\Roboto-Medium.woff2" />
+    <None Include="Content\build\fonts\Roboto-Regular.eot" />
+    <None Include="Content\build\fonts\Roboto-Regular.ttf" />
+    <None Include="Content\build\fonts\Roboto-Regular.woff" />
+    <None Include="Content\build\fonts\Roboto-Regular.woff2" />
+    <None Include="Content\build\fonts\Roboto-Thin.eot" />
+    <None Include="Content\build\fonts\Roboto-Thin.ttf" />
+    <None Include="Content\build\fonts\Roboto-Thin.woff" />
+    <None Include="Content\build\fonts\Roboto-Thin.woff2" />
+    <None Include="package.json" />
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{f5c63f0f-912c-4347-b2ef-307196e24d69}</SharePointProjectItemId>
     </None>
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
+    <None Include="SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{3e96d605-05be-4659-9557-649ccb0eb37b}</SharePointProjectItemId>
+    </None>
+    <None Include="www\app.jsx" />
+    <None Include="www\components\materialize.jsx" />
+    <None Include="www\components\mikkkkkkkkk.ppp" />
+    <None Include="www\components\project-row.jsx" />
+    <None Include="www\components\projects-list.jsx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Scripts\jquery-1.9.1.min.map" />
     <None Include="Scripts\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{ab5eead7-709c-4624-a2a4-dedb74f114b3}</SharePointProjectItemId>
     </None>
     <Content Include="Scripts\Elements.xml" />
-    <Content Include="Scripts\App.js" />
-    <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\jquery-1.9.1.js" />
-    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\_references.js" />
   </ItemGroup>
   <ItemGroup>
@@ -67,7 +111,6 @@
       <SharePointProjectItemId>{4d462325-4d8b-4713-a970-40b62c25da41}</SharePointProjectItemId>
     </None>
     <Content Include="Content\Elements.xml" />
-    <Content Include="Content\App.css" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Images\AppIcon.png">

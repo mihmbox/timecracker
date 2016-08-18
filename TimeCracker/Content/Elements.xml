@@ -1,6 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Content">
-    <File Path="Content\App.css" Url="Content/App.css" ReplaceContent="TRUE" />
+    <File Path="Content\build\app.css" Url="Content/build/app.css" ReplaceContent="TRUE" />
+    <File Path="Content\build\app.js" Url="Content/build/app.js" ReplaceContent="TRUE" />
+    <File Path="Content\build\vendor.css" Url="Content/build/vendor.css" ReplaceContent="TRUE" />
+    <File Path="Content\build\vendor.js" Url="Content/build/vendor.js" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Bold.eot" Url="Content/build/fonts/Roboto-Bold.eot" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Bold.ttf" Url="Content/build/fonts/Roboto-Bold.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Bold.woff" Url="Content/build/fonts/Roboto-Bold.woff" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Bold.woff2" Url="Content/build/fonts/Roboto-Bold.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Light.eot" Url="Content/build/fonts/Roboto-Light.eot" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Light.ttf" Url="Content/build/fonts/Roboto-Light.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Light.woff" Url="Content/build/fonts/Roboto-Light.woff" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Light.woff2" Url="Content/build/fonts/Roboto-Light.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Medium.eot" Url="Content/build/fonts/Roboto-Medium.eot" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Medium.ttf" Url="Content/build/fonts/Roboto-Medium.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Medium.woff" Url="Content/build/fonts/Roboto-Medium.woff" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Medium.woff2" Url="Content/build/fonts/Roboto-Medium.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Regular.eot" Url="Content/build/fonts/Roboto-Regular.eot" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Regular.ttf" Url="Content/build/fonts/Roboto-Regular.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Regular.woff" Url="Content/build/fonts/Roboto-Regular.woff" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Regular.woff2" Url="Content/build/fonts/Roboto-Regular.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Thin.eot" Url="Content/build/fonts/Roboto-Thin.eot" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Thin.ttf" Url="Content/build/fonts/Roboto-Thin.ttf" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Thin.woff" Url="Content/build/fonts/Roboto-Thin.woff" ReplaceContent="TRUE" />
+    <File Path="Content\build\fonts\Roboto-Thin.woff2" Url="Content/build/fonts/Roboto-Thin.woff2" ReplaceContent="TRUE" />
+    <File Path="Content\build\images\mik-ui-icons_444444_256x240.png" Url="Content/build/images/mik-ui-icons_444444_256x240.png" ReplaceContent="TRUE" />
+    <File Path="Content\build\images\mikkkkkkkkk.png" Url="Content/build/images/mikkkkkkkkk.png" ReplaceContent="TRUE" />
+    <File Path="Content\build\images\subfolder\mikkkkkkkkk.png" Url="Content/build/images/subfolder/mikkkkkkkkk.png" ReplaceContent="TRUE" />
   </Module>
 </Elements>
