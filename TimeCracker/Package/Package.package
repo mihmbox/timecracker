@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="e54f0bab-b5b5-42b8-8f1a-672034e973a8" 
+        solutionId="e54f0bab-b5b5-42b8-8f1a-672034e973a8" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="TimeCracker"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="8aec062e-5068-453e-a426-e2180808bb45" />
+  </features>
+</package>
