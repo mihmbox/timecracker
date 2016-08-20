@@ -1,0 +1,23 @@
+#s4-titlerow {
+    display: none !important;
+}
+
+#app {
+    /*background: yellow;	*/
+    /*background-image: url(/Content/build/images/mikkkkkkkkk.png);	*/
+}
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+main {
+    flex: 1 0 auto;
+}
+
+
+.sync-messages-queue {
+    max-height: 160px;
+    overflow-y: auto;
+}

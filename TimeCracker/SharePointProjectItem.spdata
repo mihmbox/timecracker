@@ -7,5 +7,18 @@
     <ProjectItemFile Source="package.json" Type="ElementFile" />
     <ProjectItemFile Source="webpack-dev-server.config.js" Type="ElementFile" />
     <ProjectItemFile Source="webpack.config.js" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Projects\ProjectsList.jsx" Target="www\components\Projects\" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Projects\ProjectsSyncAction.jsx" Target="www\components\Projects\" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Projects\ProjectsToolbar.jsx" Target="www\components\Projects\" Type="ElementFile" />
+    <ProjectItemFile Source="www\layouts\index.js" Target="www\layouts\" Type="ElementFile" />
+    <ProjectItemFile Source="www\layouts\MainLayout.jsx" Target="www\layouts\" Type="ElementFile" />
+    <ProjectItemFile Source="www\layouts\NoMatch.jsx" Target="www\layouts\" Type="ElementFile" />
+    <ProjectItemFile Source="www\layouts\Projects.jsx" Target="www\layouts\" Type="ElementFile" />
+    <ProjectItemFile Source="www\layouts\Timesheet.jsx" Target="www\layouts\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\10kfeet-api.js" Target="www\services\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\sp-projects-import.js" Target="www\services\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\util\sp-app-list-utils.js" Target="www\services\util\" Type="ElementFile" />
+    <ProjectItemFile Source="www\config.js" Target="www\" Type="ElementFile" />
+    <ProjectItemFile Source="www\main.css" Target="www\" Type="ElementFile" />
   </Files>
 </ProjectItem>

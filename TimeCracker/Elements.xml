@@ -6,5 +6,18 @@
     <File Path="package.json" Url="package.json" ReplaceContent="TRUE" />
     <File Path="webpack-dev-server.config.js" Url="webpack-dev-server.config.js" ReplaceContent="TRUE" />
     <File Path="webpack.config.js" Url="webpack.config.js" ReplaceContent="TRUE" />
+    <File Path="www\components\Projects\ProjectsList.jsx" Url="www/components/Projects/ProjectsList.jsx" ReplaceContent="TRUE" />
+    <File Path="www\components\Projects\ProjectsSyncAction.jsx" Url="www/components/Projects/ProjectsSyncAction.jsx" ReplaceContent="TRUE" />
+    <File Path="www\components\Projects\ProjectsToolbar.jsx" Url="www/components/Projects/ProjectsToolbar.jsx" ReplaceContent="TRUE" />
+    <File Path="www\layouts\index.js" Url="www/layouts/index.js" ReplaceContent="TRUE" />
+    <File Path="www\layouts\MainLayout.jsx" Url="www/layouts/MainLayout.jsx" ReplaceContent="TRUE" />
+    <File Path="www\layouts\NoMatch.jsx" Url="www/layouts/NoMatch.jsx" ReplaceContent="TRUE" />
+    <File Path="www\layouts\Projects.jsx" Url="www/layouts/Projects.jsx" ReplaceContent="TRUE" />
+    <File Path="www\layouts\Timesheet.jsx" Url="www/layouts/Timesheet.jsx" ReplaceContent="TRUE" />
+    <File Path="www\services\10kfeet-api.js" Url="www/services/10kfeet-api.js" ReplaceContent="TRUE" />
+    <File Path="www\services\sp-projects-import.js" Url="www/services/sp-projects-import.js" ReplaceContent="TRUE" />
+    <File Path="www\services\util\sp-app-list-utils.js" Url="www/services/util/sp-app-list-utils.js" ReplaceContent="TRUE" />
+    <File Path="www\config.js" Url="www/config.js" ReplaceContent="TRUE" />
+    <File Path="www\main.css" Url="www/main.css" ReplaceContent="TRUE" />
   </Module>
 </Elements>
