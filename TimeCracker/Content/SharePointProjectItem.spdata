@@ -26,8 +26,6 @@
     <ProjectItemFile Source="build\fonts\Roboto-Thin.ttf" Target="Content\build\fonts\" Type="ElementFile" />
     <ProjectItemFile Source="build\fonts\Roboto-Thin.woff" Target="Content\build\fonts\" Type="ElementFile" />
     <ProjectItemFile Source="build\fonts\Roboto-Thin.woff2" Target="Content\build\fonts\" Type="ElementFile" />
-    <ProjectItemFile Source="build\images\mik-ui-icons_444444_256x240.png" Target="Content\build\images\" Type="ElementFile" />
     <ProjectItemFile Source="build\images\mikkkkkkkkk.png" Target="Content\build\images\" Type="ElementFile" />
-    <ProjectItemFile Source="build\images\subfolder\mikkkkkkkkk.png" Target="Content\build\images\subfolder\" Type="ElementFile" />
   </Files>
 </ProjectItem>

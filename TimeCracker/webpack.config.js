@@ -21,9 +21,10 @@ const config = {
         ],
         'vendor': [
                 'webpack-dev-server/client?https://' + HOST + ':' + PORT + '/', // WebpackDevServer host and port
-                'webpack/hot/only-dev-server' // "only" prevents reload on syntax errors
-        ]
-        /*.concat(Object.keys(vendorScripts))*/
+                'webpack/hot/only-dev-server',
+                'jquery' // "only" prevents reload on syntax errors
+            ]
+            /*.concat(Object.keys(vendorScripts))*/
     },
     devtool: 'eval',
     output: {
@@ -38,27 +39,41 @@ const config = {
         host: 'localhost',
     },
     module: {
-        loaders: [{
-            test: /\.css$/,
-            loader: ExtractTextPlugin.extract(
-                'style', // backup loader when not building .css file
-                'css!autoprefixer-loader' // loaders to preprocess CSS
-            ),
-        }, {
-            test: /\.(eot|ttf|woff|woff2)$/,
-            loader: 'file?name=fonts/[name].[ext]'
-        }, {
-            test: /\.(jpe?g|png|gif|ico|svg)$/i,
-            loader: 'url-loader?name=images/[name].[ext]&limit=1'
-        }, {
-            test: /.jsx?$/, // Match both .js and .jsx            
-            loader: ['babel-loader'], // babel loads jsx and es6-7
-            exclude: /node_modules/,
-            query: {
-                presets: ['es2015', 'react'],
-                plugins: ["transform-class-properties"]
+        loaders: [
+            /*{
+                        test: /jquery/,
+                        loader: 'expose?$!expose?jQuery'
+                    }, */
+            {
+                test: /\.css$/,
+                loader: ExtractTextPlugin.extract(
+                    'style', // backup loader when not building .css file
+                    'css!autoprefixer-loader' // loaders to preprocess CSS
+                ),
+            }, {
+                test: /\.(eot|ttf|woff|woff2)$/,
+                loader: 'file?name=fonts/[name].[ext]'
+            }, {
+                test: /\.(jpe?g|png|gif|ico|svg)$/i,
+                loader: 'url-loader?name=images/[name].[ext]&limit=1'
+            }, {
+                test: /.jsx?$/, // Match both .js and .jsx
+                loader: ['babel-loader'], // babel loads jsx and es6-7
+                exclude: /node_modules/,
+                query: {
+                    presets: ['es2015', 'react'],
+                    plugins: [
+                        "transform-class-properties",
+                        "syntax-object-rest-spread",
+                        "transform-object-rest-spread",
+                        "babel-root-import",
+                    ]
+                }
             }
-        }]
+        ]
+    },
+    externals: {
+        jquery: 'jQuery'
     },
     plugins: [
         // Enables Hot Modules Replacement
@@ -88,11 +103,17 @@ const config = {
             // publicPath: './'
         }),
         // Global JS variables
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery"
-        })
+        // new webpack.ProvidePlugin({
+        //     // $: "jquery",
+        //     // jQuery: "jquery"
+        //     $: "jquery",
+        //     jQuery: "jquery",
+        //     "window.jQuery": "jquery"
+        // })
     ],
+    resolve: {
+        extensions: ["", ".js", ".jsx"]
+    }
 };
 
 module.exports = config;

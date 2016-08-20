@@ -25,8 +25,6 @@
     <File Path="Content\build\fonts\Roboto-Thin.ttf" Url="Content/build/fonts/Roboto-Thin.ttf" ReplaceContent="TRUE" />
     <File Path="Content\build\fonts\Roboto-Thin.woff" Url="Content/build/fonts/Roboto-Thin.woff" ReplaceContent="TRUE" />
     <File Path="Content\build\fonts\Roboto-Thin.woff2" Url="Content/build/fonts/Roboto-Thin.woff2" ReplaceContent="TRUE" />
-    <File Path="Content\build\images\mik-ui-icons_444444_256x240.png" Url="Content/build/images/mik-ui-icons_444444_256x240.png" ReplaceContent="TRUE" />
     <File Path="Content\build\images\mikkkkkkkkk.png" Url="Content/build/images/mikkkkkkkkk.png" ReplaceContent="TRUE" />
-    <File Path="Content\build\images\subfolder\mikkkkkkkkk.png" Url="Content/build/images/subfolder/mikkkkkkkkk.png" ReplaceContent="TRUE" />
   </Module>
 </Elements>

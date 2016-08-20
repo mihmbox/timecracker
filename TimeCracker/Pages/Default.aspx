@@ -19,6 +19,8 @@
 
     <!--Import Google Icon Font-->
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+
     <link rel="Stylesheet" type="text/css" href="//localhost:3000/Content/build/vendor.css" />
     <link rel="Stylesheet" type="text/css" href="//localhost:3000/Content/build/app.css" />
 </asp:Content>
@@ -32,6 +34,11 @@
 <asp:Content ContentPlaceHolderID="PlaceHolderMain" runat="server">
 
     <div id="app"></div>
+
+
+     <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
 
     <script type="text/javascript" src="//localhost:3000/Content/build/vendor.js"></script>
     <script type="text/javascript" src="//localhost:3000/Content/build/app.js"></script>
