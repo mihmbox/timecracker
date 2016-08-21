@@ -1,7 +1,7 @@
 var config = {
     API: {
         TenFeet_URL: 'https://api.10000ft.com',
-        TenFeet_TOKEN: 'VkRpWURvdGI5Q3hQYnNLaHdHcmpVMDFBZWZzRWJBU1orcEJaMHJzUWdFN1NLTGhHM0wvS2VPT2sxV3pLCjNlM3UvSXdOYUxwcmtORWNGQlRZQ1MrOW1zV0dMZzNKOUc1YXVIY1pKd2xEWW1ZZm0yUUNWR1NjWXlNSwo1QS93WlREZQo'
+        TenFeet_TOKEN: ''
     },
     Lists: {
         Projects: {
@@ -15,6 +15,8 @@ var config = {
             name: 'Timesheets',
             fields: {
                 Title: 'Title',
+                Description: 'Description',
+                Parent: 'Parent',
                 Author:'Author',
                 Created: 'Created',
                 Start: 'Start',
@@ -26,6 +28,13 @@ var config = {
             States: {
                 Stopped: 'Stopped',
                 Running: 'Running'
+            }
+        },
+        TimesheetTasks: {
+            name: 'Timesheet Tasks',
+            fields: {
+                Title: 'Title',
+                Timesheet: 'Timesheet'
             }
         }
     }
