@@ -16,8 +16,12 @@
     <File Path="www\layouts\Timesheet.jsx" Url="www/layouts/Timesheet.jsx" ReplaceContent="TRUE" />
     <File Path="www\services\10kfeet-api.js" Url="www/services/10kfeet-api.js" ReplaceContent="TRUE" />
     <File Path="www\services\sp-projects-import.js" Url="www/services/sp-projects-import.js" ReplaceContent="TRUE" />
-    <File Path="www\services\util\sp-app-list-utils.js" Url="www/services/util/sp-app-list-utils.js" ReplaceContent="TRUE" />
     <File Path="www\config.js" Url="www/config.js" ReplaceContent="TRUE" />
     <File Path="www\main.css" Url="www/main.css" ReplaceContent="TRUE" />
+    <File Path="www\components\Timesheet\DayTimesheet.jsx" Url="www/components/Timesheet/DayTimesheet.jsx" ReplaceContent="TRUE" />
+    <File Path="www\components\Spinner.jsx" Url="www/components/Spinner.jsx" ReplaceContent="TRUE" />
+    <File Path="www\services\util\sharepointUtils.js" Url="www/services/util/sharepointUtils.js" ReplaceContent="TRUE" />
+    <File Path="www\services\projects.js" Url="www/services/projects.js" ReplaceContent="TRUE" />
+    <File Path="www\services\timesheets.js" Url="www/services/timesheets.js" ReplaceContent="TRUE" />
   </Module>
 </Elements>

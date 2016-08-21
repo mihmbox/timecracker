@@ -14,6 +14,10 @@ function GetItemTypeForListName(name) {
     return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("").slice(1) + "ListItem";
 }
 
+function getUserId() {
+    return _spPageContextInfo.userId;
+}
+
 var loadRequestExecutor = function() {
     return new Promise((resolve, reject) => {
         ExecuteOrDelayUntilScriptLoaded(function() {
@@ -28,11 +32,36 @@ var loadRequestExecutor = function() {
     });
 }
 
-var findListItem = function(listName, filter) {
+var findListItem = function(listName, filter, extraQuery) {
+    filter = filter || '';
+    extraQuery= extraQuery || '';
+
     return new Promise((resolve, reject) => {
         loadRequestExecutor().then((executor) => {
             executor.executeAsync({
-                url: `${appWebUrl}/_api/SP.AppContextSite(@target)/web/lists/getbytitle('${listName}')/items?@target='${hostWebUrl}'&$filter=${filter}`,
+                url: `${appWebUrl}/_api/SP.AppContextSite(@target)/web/lists/getbytitle('${listName}')/items?@target='${hostWebUrl}'&$filter=${filter}&${extraQuery}`,
+                method: "GET",
+                headers: {
+                    "Accept": "application/json; odata=verbose"
+                },
+                success: function(data) {
+                    resolve(JSON.parse(data.body).d);
+                },
+                error: function() {
+                    reject(...arguments);
+                }
+            })
+        });
+    });
+}
+
+var getById = function(listName, itemId, viewFields) {
+    viewFields = viewFields || '';
+
+    return new Promise((resolve, reject) => {
+        loadRequestExecutor().then((executor) => {
+            executor.executeAsync({
+                url: `${appWebUrl}/_api/SP.AppContextSite(@target)/web/lists/getbytitle('${listName}')/items(${itemId})?@target='${hostWebUrl}'&$select=${viewFields}`,
                 method: "GET",
                 headers: {
                     "Accept": "application/json; odata=verbose"
@@ -104,8 +133,6 @@ var updateListItem = function(listName, itemId, object) {
                 },
                 success: function(data) {
                     resolve();
-                    // debugger;
-                    // resolve(JSON.parse(data.body).d);
                 },
                 error: function() {
                     reject(...arguments);
@@ -119,5 +146,7 @@ var updateListItem = function(listName, itemId, object) {
 export default {
     findListItem,
     createListItem,
-    updateListItem
+    updateListItem,
+    getUserId,
+    getById
 }

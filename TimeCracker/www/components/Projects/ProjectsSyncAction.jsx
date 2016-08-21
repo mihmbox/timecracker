@@ -21,7 +21,7 @@ export default class ProjectsSyncAction extends React.Component {
     }
 
     componentDidMount() {
-        this.showModal()
+        // this.showModal()
     }
 
     showModal(e) {
@@ -47,7 +47,8 @@ export default class ProjectsSyncAction extends React.Component {
         this.setState({stage: 'LOADING_PROJECTS'});
 
         // TODO test for first Five
-        TenFeetApi.getProjects(5, true).then((projects) => {
+        //TenFeetApi.getProjects(5, true).then((projects) => {
+        TenFeetApi.getProjects(100, false).then((projects) => {
             var count = projects.length;
             this.addMessage(`Loaded ${count} projects from 10000ft.`);
             this.setState({stage: 'IMPORTING_PROJECTS', projects: projects});
@@ -70,9 +71,9 @@ export default class ProjectsSyncAction extends React.Component {
                     this.addMessage(`Error occured for "${project.name.trim()}": ${err}`)
                 }
             });
-        })/*.catch(function() {
+        }).catch(function() {
             alert('Fail');
-        });*/
+        });
     }
 
     render() {

@@ -17,8 +17,12 @@
     <ProjectItemFile Source="www\layouts\Timesheet.jsx" Target="www\layouts\" Type="ElementFile" />
     <ProjectItemFile Source="www\services\10kfeet-api.js" Target="www\services\" Type="ElementFile" />
     <ProjectItemFile Source="www\services\sp-projects-import.js" Target="www\services\" Type="ElementFile" />
-    <ProjectItemFile Source="www\services\util\sp-app-list-utils.js" Target="www\services\util\" Type="ElementFile" />
     <ProjectItemFile Source="www\config.js" Target="www\" Type="ElementFile" />
     <ProjectItemFile Source="www\main.css" Target="www\" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Timesheet\DayTimesheet.jsx" Target="www\components\Timesheet\" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Spinner.jsx" Target="www\components\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\util\sharepointUtils.js" Target="www\services\util\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\projects.js" Target="www\services\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\timesheets.js" Target="www\services\" Type="ElementFile" />
   </Files>
 </ProjectItem>

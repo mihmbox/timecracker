@@ -1,23 +1,69 @@
 #s4-titlerow {
     display: none !important;
 }
-
+nav a.active {
+    background: rgba(0, 0, 0, 0.1);
+}
 #app {
     /*background: yellow;	*/
     /*background-image: url(/Content/build/images/mikkkkkkkkk.png);	*/
 }
-
 .app {
     display: flex;
-    min-height: 100vh;
+    min-height: 90vh;
     flex-direction: column;
 }
 main {
     flex: 1 0 auto;
+    padding-top: 20px;
 }
-
-
 .sync-messages-queue {
     max-height: 160px;
     overflow-y: auto;
+}
+.collection-item:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+.timesheet__project-name, .timesheet__hours {
+    font-size: 1.5em;
+}
+.timesheet__hours {
+    font-weight: bold;
+    margin-top: 15px;
+    width: 64px;
+    text-align: center;
+}
+.timesheet__currentdate {
+    display: inline-block;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.timesheet_datewr {
+    justify-content: flex-end;
+}
+.timesheet__hours-col {
+    position: relative;
+}
+.timesheet__hours-col .preloader-wrapper {
+    position: absolute;
+    right: 12px;
+    top: -5px;
+}
+
+
+.timesheets-collection .collection-item > .row {
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.timesheets-collection .collection-item {
+    padding: 0
+}
+
+
+.timesheet__tasks-wr {
+    margin-left: 50px;
+    margin-bottom: 10px;
 }

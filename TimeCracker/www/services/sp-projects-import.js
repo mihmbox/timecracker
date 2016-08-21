@@ -1,7 +1,7 @@
 import axios from 'axios'
 import queryString from 'query-string';
 import config from '~/www/config'
-import spListUtils from './util/sp-app-list-utils'
+import spListUtils from './util/sharepointUtils'
 
 var list = config.Lists.Projects;
 
@@ -58,8 +58,6 @@ var __importProjectsFrom10KFt = function(projects, callbacks) {
 
     return promise;
 }
-
-
 
 
 var importProjectsFrom10KFt = function(projects, callbacks) {

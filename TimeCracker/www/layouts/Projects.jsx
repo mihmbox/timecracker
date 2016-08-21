@@ -6,12 +6,16 @@ export default class Projects extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            date: new Date()
+        };
     }
     render() {
+
         return (
             <div className="projects-layout">
                 <h4>Projects</h4>
-                <ProjectsList pageSize="2"/>
+                <ProjectsList pageSize="20"/>
             </div>
         );
     }

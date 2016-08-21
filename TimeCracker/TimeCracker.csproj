@@ -55,17 +55,15 @@
     </Content>
     <Content Include="webpack-dev-server.config.js" />
     <Content Include="webpack.config.js" />
-    <Content Include="www\components\images\mikkkkkkkkk.png" />
-    <Content Include="www\components\images\subfolder\mikkkkkkkkk.png" />
-    <Content Include="www\components\mik-ui-icons_444444_256x240.png" />
     <Content Include="www\config.js" />
     <Content Include="www\images\mikkkkkkkkk.png" />
-    <Content Include="www\images\subfolder\mikkkkkkkkk.png" />
     <Content Include="www\layouts\index.js" />
     <Content Include="www\main.css" />
     <Content Include="www\services\10kfeet-api.js" />
+    <Content Include="www\services\projects.js" />
     <Content Include="www\services\sp-projects-import.js" />
-    <Content Include="www\services\util\sp-app-list-utils.js" />
+    <Content Include="www\services\timesheets.js" />
+    <Content Include="www\services\util\sharepointUtils.js" />
     <None Include="Content\build\fonts\Roboto-Bold.eot" />
     <None Include="Content\build\fonts\Roboto-Bold.ttf" />
     <None Include="Content\build\fonts\Roboto-Bold.woff" />
@@ -100,6 +98,8 @@
     <None Include="www\components\Projects\ProjectsList.jsx" />
     <None Include="www\components\Projects\ProjectsSyncAction.jsx" />
     <None Include="www\components\Projects\ProjectsToolbar.jsx" />
+    <None Include="www\components\Spinner.jsx" />
+    <None Include="www\components\Timesheet\DayTimesheet.jsx" />
     <None Include="www\layouts\MainLayout.jsx" />
     <None Include="www\layouts\NoMatch.jsx" />
     <None Include="www\layouts\Projects.jsx" />

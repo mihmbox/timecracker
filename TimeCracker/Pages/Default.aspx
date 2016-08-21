@@ -23,6 +23,9 @@
 
     <link rel="Stylesheet" type="text/css" href="//localhost:3000/Content/build/vendor.css" />
     <link rel="Stylesheet" type="text/css" href="//localhost:3000/Content/build/app.css" />
+
+    <%--<link rel="Stylesheet" type="text/css" href="../Content/build/vendor.css" />
+    <link rel="Stylesheet" type="text/css" href="../Content/build/app.css" />--%>
 </asp:Content>
 
 <%-- The markup in the following Content element will be placed in the TitleArea of the page --%>
@@ -42,5 +45,8 @@
 
     <script type="text/javascript" src="//localhost:3000/Content/build/vendor.js"></script>
     <script type="text/javascript" src="//localhost:3000/Content/build/app.js"></script>
+
+    <%--<script type="text/javascript" src="../Content/build/vendor.js"></script>
+    <script type="text/javascript" src="../Content/build/app.js"></script>--%>
 
 </asp:Content>
