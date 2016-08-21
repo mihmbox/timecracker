@@ -24,5 +24,8 @@
     <ProjectItemFile Source="www\services\util\sharepointUtils.js" Target="www\services\util\" Type="ElementFile" />
     <ProjectItemFile Source="www\services\projects.js" Target="www\services\" Type="ElementFile" />
     <ProjectItemFile Source="www\services\timesheets.js" Target="www\services\" Type="ElementFile" />
+    <ProjectItemFile Source="www\services\timesheets-tasks.js" Target="www\services\" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Timesheet\DayTimesheetRow.jsx" Target="www\components\Timesheet\" Type="ElementFile" />
+    <ProjectItemFile Source="www\components\Timesheet\old_DayTimesheet.jsx" Target="www\components\Timesheet\" Type="ElementFile" />
   </Files>
 </ProjectItem>

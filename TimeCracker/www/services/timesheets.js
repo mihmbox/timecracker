@@ -28,7 +28,7 @@ var getTimesheetForDay = function(date, userId, projectId) {
         filter += ` and (${fields.Project} eq '${projectId}')`;
     }
 
-    var extraQuery = `$expand=${fields.Project}&$select=Id,${fields.Title},${fields.State},${fields.Start},${fields.Hours},${fields.Project}/Id,${fields.Project}/Title`;
+    var extraQuery = `$expand=${fields.Project}&$select=Id,${fields.Title},${fields.State},${fields.Start},${fields.Hours},${fields.Project}/Id,${fields.Project}/Title&$orderby=Modified desc`;
 
     return spListUtils.findListItem(list.name, filter, extraQuery).then(function(data) {
         return data.results;
@@ -51,7 +51,8 @@ var createTimesheet = function(data) {
         obj[list.fields.Date] = data.startDate;
         obj[list.fields.Project + 'Id'] = data.projectId;
         obj[list.fields.Hours] = data.hours;
-
+        obj[list.fields.Description] = data.description || '';
+        obj[list.fields.Parent + 'Id'] = data.parentId || '';
 
         return spListUtils.createListItem(list.name, obj).then(function(data) {
             return data;

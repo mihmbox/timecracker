@@ -23,5 +23,8 @@
     <File Path="www\services\util\sharepointUtils.js" Url="www/services/util/sharepointUtils.js" ReplaceContent="TRUE" />
     <File Path="www\services\projects.js" Url="www/services/projects.js" ReplaceContent="TRUE" />
     <File Path="www\services\timesheets.js" Url="www/services/timesheets.js" ReplaceContent="TRUE" />
+    <File Path="www\services\timesheets-tasks.js" Url="www/services/timesheets-tasks.js" ReplaceContent="TRUE" />
+    <File Path="www\components\Timesheet\DayTimesheetRow.jsx" Url="www/components/Timesheet/DayTimesheetRow.jsx" ReplaceContent="TRUE" />
+    <File Path="www\components\Timesheet\old_DayTimesheet.jsx" Url="www/components/Timesheet/old_DayTimesheet.jsx" ReplaceContent="TRUE" />
   </Module>
 </Elements>

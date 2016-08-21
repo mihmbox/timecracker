@@ -11,7 +11,7 @@ function getRequestDigest() {
 }
 // Get List Item Type metadata
 function GetItemTypeForListName(name) {
-    return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("").slice(1) + "ListItem";
+    return "SP.Data." + name.charAt(0).toUpperCase() + name.split(" ").join("_x0020_").slice(1) + "ListItem";
 }
 
 function getUserId() {

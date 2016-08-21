@@ -2,12 +2,10 @@ import React from 'react'
 import 'materialize-autocomplete'
 
 import Spinner from '~/www/components/Spinner'
-import DayTimesheetRow from './DayTimesheetRow'
 
 import config from '~/www/config'
 import projectsService from '~/www/services/projects'
 import timesheetsService from '~/www/services/timesheets'
-import timesheetTasksService from '~/www/services/timesheets-tasks'
 import sharepointUtils from '~/www/services/util/sharepointUtils'
 
 const MLS_IN_HOUR = 1e3 * 60 * 60;
@@ -18,7 +16,8 @@ export default class DayTimesheet extends React.Component {
 
         this.state = {
             isLoading: true,
-            rows: []
+            rows: [],
+            updateHoursTimeout: 500
         };
     }
 
@@ -26,17 +25,19 @@ export default class DayTimesheet extends React.Component {
         this.loadTimesheetRows();
     }
 
-    componentWillUnmount() {}
+    componentWillUnmount() {
+        clearInterval(this.hoursTimer);
+    }
 
     loadTimesheetRows() {
         this.setState({isLoading: true});
         // Load timesheet items for specified Date
-        var timesheetRows = [];
         timesheetsService.getTimesheetForDay(this.props.date, sharepointUtils.getUserId()).then(data => {
             var now = new Date();
-            timesheetRows = data.map(x => {
+            var timesheetRows = data.map(x => {
                 var hours = timesheetsService.calculateTotalHours(x, now);
                 var isRunning = x.State == config.Lists.Timesheets.States.Running;
+
                 return {
                     id: x.Id,
                     project: {
@@ -48,22 +49,21 @@ export default class DayTimesheet extends React.Component {
                 }
             });
 
-            return timesheetRows;
-        }).then((rows) => {
-            // Load tasks
-            return timesheetTasksService.getTasksForTimesheets(rows.map(x => x.id))
-        }).then((tasks) => {
-            // Assign tasks to timesheet rows
-            timesheetRows.forEach(r => {
-                r.tasks = tasks.filter(t => t.TimesheetId == r.id)
-            })
-        }).then(() => {
             this.setState({
                 isLoading: false,
                 rows: timesheetRows
             }, () => {
                 this.initAutocomplete()
             });
+
+            clearInterval(this.hoursTimer)
+            this.hoursTimer = setInterval(() => {
+                var newRows = [...this.state.rows];
+                newRows.filter(r => r.isRunning).forEach(row => {
+                    row.hours += this.state.updateHoursTimeout / MLS_IN_HOUR;
+                });
+                this.setState({rows: newRows});
+            }, this.state.updateHoursTimeout);
         });
     }
 
@@ -118,7 +118,30 @@ export default class DayTimesheet extends React.Component {
         });
     }
 
+    toggleTimer(timesheetId, start) {
+        var now = new Date();
+        this.state.rows.filter(r => r.id == timesheetId).forEach(row => {
+            var promise = start
+                ? timesheetsService.startTimer(timesheetId, now)
+                : timesheetsService.stopTimer(timesheetId, now);
+
+            promise.then(item => {
+                // Set new state
+                var newRows = [...this.state.rows];
+                newRows.filter(r => r.id == timesheetId).forEach(row => {
+                    row.isRunning = start
+                    row.hours = item.Hours || 0;
+                });
+                this.setState({rows: newRows});
+            });
+        });
+    }
+
     render() {
+        var btnClass = (isRunning) => 'btn-floating btn-large waves-effect waves-light red right' + (isRunning
+            ? ''
+            : ' lllllighten-3 ');
+
         return (
             <div>
                 {this.state.isLoading && <Spinner/>}
@@ -131,8 +154,41 @@ export default class DayTimesheet extends React.Component {
                             <ul id="projectsDropdown" className="dropdown-content ac-dropdown"></ul>
                         </div>
 
-                        <div className="collection timesheets-collection">                            
-                            {!!this.state.rows.length && this.state.rows.map((row) => (<DayTimesheetRow key={row.id} row={row} date={this.props.date}/>))}
+                        <div className="collection timesheets-collection">
+                            {!!this.state.rows.length && this.state.rows.map((row) => (
+                                <div className={row.isRunning
+                                    ? 'collection-item'
+                                    : ' collection-item'} data-id={row.project.id}>
+                                    <div className={row.isRunning
+                                        ? 'row teal lighten-2 white-text'
+                                        : ' row'}>
+                                        <div className="col s10">
+                                            <h5 className="timesheet__project-name">
+                                                {row.project.title}
+                                            </h5>
+                                        </div>
+                                        <div className="col s1 timesheet__hours-col">
+                                            <span className="right timesheet__hours">
+                                                {Math.round(row.hours * 1e2) / 1e2}
+                                            </span>
+
+                                            {row.isRunning && <Spinner big={true}/>}
+
+                                        </div>
+                                        <div className="col s1">
+                                            <a className={btnClass(row.isRunning)} onClick={() => this.toggleTimer(row.id, !row.isRunning)}>
+                                                <i className="material-icons">{row.isRunning
+                                                        ? 'pause'
+                                                        : 'play_arrow'}</i>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div className="timesheet__tasks-wr">
+                                        <input type="text" ref={'taskAutocomplete-' + row.id} placeholder="What are you working on right now?" data-activates="projectsDropdown" data-beloworigin="true" autocomplete="off"/>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 )}

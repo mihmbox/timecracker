@@ -62,6 +62,7 @@
     <Content Include="www\services\10kfeet-api.js" />
     <Content Include="www\services\projects.js" />
     <Content Include="www\services\sp-projects-import.js" />
+    <Content Include="www\services\timesheets-tasks.js" />
     <Content Include="www\services\timesheets.js" />
     <Content Include="www\services\util\sharepointUtils.js" />
     <None Include="Content\build\fonts\Roboto-Bold.eot" />
@@ -100,6 +101,8 @@
     <None Include="www\components\Projects\ProjectsToolbar.jsx" />
     <None Include="www\components\Spinner.jsx" />
     <None Include="www\components\Timesheet\DayTimesheet.jsx" />
+    <None Include="www\components\Timesheet\DayTimesheetRow.jsx" />
+    <None Include="www\components\Timesheet\old_DayTimesheet.jsx" />
     <None Include="www\layouts\MainLayout.jsx" />
     <None Include="www\layouts\NoMatch.jsx" />
     <None Include="www\layouts\Projects.jsx" />
