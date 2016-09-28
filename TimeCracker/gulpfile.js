@@ -5,8 +5,8 @@ var filter = require('gulp-filter');
 var webpack = require('webpack-stream');
 
 var settings = {
-    username: "mik@fdh.by",
-    password: '59MIhm___',
+    username: "user",
+    password: 'password',
     siteUrl: 'https://firstdevelopmenthub-87fb5b989d9858.sharepoint.com/sites/mik/Trucker'
 };
 
